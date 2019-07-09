@@ -2,8 +2,8 @@ package com.example.ifit.entity;
 
 public class Plan {
     private long id;
-    private long video_id;
-    private long user_id;
+    private long videoId;
+    private long userId;
 
     public long getId() {
         return id;
@@ -13,20 +13,20 @@ public class Plan {
         this.id = id;
     }
 
-    public long getVideo_id() {
-        return video_id;
+    public long getVideoId() {
+        return videoId;
     }
 
-    public void setVideo_id(int video_id) {
-        this.video_id = video_id;
+    public void setVideo_id(int videoId) {
+        this.videoId = videoId;
     }
 
-    public long getUser_id() {
-        return user_id;
+    public long getUserId() {
+        return userId;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUserId(int user_id) {
+        this.userId = userId;
     }
 
 

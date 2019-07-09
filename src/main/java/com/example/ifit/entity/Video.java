@@ -4,8 +4,8 @@ public class Video {
     private long id;
     private String name;
     private String intro;
-    private long author_id;
-    private long course_id;
+    private long authorId;
+    private long courseId;
     private int like;
     private int unlike;
     private int difficulty;
@@ -19,20 +19,20 @@ public class Video {
         this.id = id;
     }
 
-    public long getAuthor_id() {
-        return author_id;
+    public long getAuthorId() {
+        return authorId;
     }
 
-    public void setAuthor_id(int author_id) {
-        this.author_id = author_id;
+    public void setAuthorId(int authorId) {
+        this.authorId = authorId;
     }
 
-    public long getCourse_id() {
-        return course_id;
+    public long getCourseId() {
+        return courseId;
     }
 
-    public void setCourse_id(int course_id) {
-        this.course_id = course_id;
+    public void setCourseId(int courseId) {
+        this.courseId = courseId;
     }
 
     public int getLike() {

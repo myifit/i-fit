@@ -8,12 +8,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
-@CrossOrigin
+//@CrossOrigin
 @RestController
 @RequestMapping("/users")
 public class UserController {
     @Autowired
-    private UserMapper userMapper1;
+    UserMapper userMapper1;
 
     @GetMapping("")
     @ResponseBody

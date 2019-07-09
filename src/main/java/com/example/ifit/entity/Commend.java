@@ -2,8 +2,8 @@ package com.example.ifit.entity;
 
 public class Commend {
     private long id;
-    private long user_id;
-    private long video_id;
+    private long userId;
+    private long videoId;
     private String text;
 
     public long getId() {
@@ -15,19 +15,19 @@ public class Commend {
     }
 
     public long getVideo_id() {
-        return video_id;
+        return videoId;
     }
 
-    public void setVideo_id(int video_id) {
-        this.video_id = video_id;
+    public void setVideo_id(int videoId) {
+        this.videoId = videoId;
     }
 
     public long getUser_id() {
-        return user_id;
+        return userId;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUser_id(int userId) {
+        this.userId = userId;
     }
 
     public String getText() {return text;}
