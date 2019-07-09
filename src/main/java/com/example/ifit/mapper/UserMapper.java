@@ -2,12 +2,12 @@ package com.example.ifit.mapper;
 
 import com.example.ifit.entity.*;
 
-public interface userMapper {
+public interface UserMapper {
     /**
      *
      * @param telephone
      * @return
      */
-    user findBytel(String telephone);
+    User findBytel(String telephone);
 
 }

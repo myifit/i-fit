@@ -1,6 +1,6 @@
 package com.example.ifit.entity;
 
-public class video {
+public class Video {
     private long id;
     private String name;
     private String intro;

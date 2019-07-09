@@ -1,6 +1,6 @@
 package com.example.ifit.entity;
 
-public class commend {
+public class Commend {
     private long id;
     private long user_id;
     private long video_id;

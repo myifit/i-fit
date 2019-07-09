@@ -1,6 +1,6 @@
 package com.example.ifit.entity;
 
-public class course {
+public class Course {
     private long id;
     private String name;
 

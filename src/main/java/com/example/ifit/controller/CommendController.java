@@ -1,4 +1,4 @@
 package com.example.ifit.controller;
 
-public class videoController {
+public class CommendController {
 }

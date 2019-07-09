@@ -1,8 +1,7 @@
 package com.example.ifit.entity;
 
-public class favorite {
+public class Plan {
     private long id;
-    private String name;
     private long video_id;
     private long user_id;
 
@@ -29,10 +28,6 @@ public class favorite {
     public void setUser_id(int user_id) {
         this.user_id = user_id;
     }
-
-    public String getName() {return name;}
-
-    public void setName(String name) {this.name=name;}
 
 
 }

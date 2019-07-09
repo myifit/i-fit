@@ -1,4 +1,4 @@
 package com.example.ifit.mapper;
 
-public interface commendMapper {
+public interface CommendMapper {
 }
