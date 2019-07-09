@@ -9,8 +9,36 @@
         <result property="picture" column="picture"/>
     </resultMap>
 
-    <select id="findBytel" parameterType="String" resultMap="tab_user">
+    <select id="findByTel" parameterType="String" resultMap="tab_user">
         SELECT * FROM user WHERE telephone = #{telephone}
     </select>
+
+    <delete id="deleteById" >
+        delete from user
+        where id=#{id}
+    </delete>
+
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
+        insert into user(telephone, name,password,picture)
+        values (#{telephone},#{name},#{password},#{picture})
+    </insert>
+
+    <update id="updatePasswordById" >
+        update user
+        set password=#{password}
+        where id=#{id}
+    </update>
+
+    <update id="updatePictureById" >
+        update user
+        set picture=#{picture}
+        where id=#{id}
+    </update>
+
+    <update id="updateNameById" >
+        update user
+        set name=#{name}
+        where id=#{id}
+    </update>
 
 </mapper>

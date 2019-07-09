@@ -9,7 +9,7 @@ public class Plan {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -17,7 +17,7 @@ public class Plan {
         return videoId;
     }
 
-    public void setVideo_id(int videoId) {
+    public void setVideo_Id(long videoId) {
         this.videoId = videoId;
     }
 
@@ -25,7 +25,7 @@ public class Plan {
         return userId;
     }
 
-    public void setUserId(int user_id) {
+    public void setUser_Id(long userId) {
         this.userId = userId;
     }
 
