@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.ifit.mapper.VideoMapper">
+    <resultMap id="tab_video" type="com.example.ifit.entity.Video">
+        <result property="id" column="id"/>
+        <result property="authorId" column="authorId"/>
+        <result property="name" column="name"/>
+        <result property="difficulty" column="difficulty"/>
+        <result property="like" column="like"/>
+        <result property="courseId" column="courseId"/>
+        <result property="intro" column="intro"/>
+        <result property="unlike" column="unlike"/>
+        <result property="recommend" column="recommend"/>
+    </resultMap>
+
+    <select id="listfindByAuthorId" resultMap="tab_video">
+        SELECT * FROM video WHERE author_id = #{author_id}
+    </select>
+
+    <select id="listfindByVideoId" resultMap="tab_video">
+        SELECT * FROM video WHERE video_id = #{video_id}
+    </select>
+
+    <delete id="deleteById" >
+        delete from video
+        where id=#{id}
+    </delete>
+
+    <insert id="insertVideo" useGeneratedKeys="true" keyProperty="id">
+        insert into video(name, intro ,course_id,author_id,"like",unlike,recommend,difficulty)
+        values (#{name},#{intro},#{course_id},#{author_id},#{like},#{unlike},#{recommend},#{difficulty})
+    </insert>
+
+    <update id="updateNameById" >
+        update video
+        set name=#{name}
+        where id=#{id}
+    </update>
+
+    <update id="updateLikeById" >
+        update video
+        set "like"=#{like}
+        where id=#{id}
+    </update>
+
+    <update id="updateUnlikeById" >
+        update video
+        set unlike=#{unlike}
+        where id=#{id}
+    </update>
+
+    <update id="updateRecommendById" >
+        update video
+        set recommend=#{recommend}
+        where id=#{id}
+    </update>
+
+</mapper>

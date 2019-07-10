@@ -19,19 +19,19 @@ public class Video {
         this.id = id;
     }
 
-    public long getAuthorId() {
+    public long getAuthor_Id() {
         return authorId;
     }
 
-    public void setAuthorId(int authorId) {
+    public void setAuthor_Id(long authorId) {
         this.authorId = authorId;
     }
 
-    public long getCourseId() {
+    public long getCourse_Id() {
         return courseId;
     }
 
-    public void setCourseId(int courseId) {
+    public void setCourse_Id(long courseId) {
         this.courseId = courseId;
     }
 
@@ -66,4 +66,12 @@ public class Video {
     public void setRecommend(int recommend) {
         this.recommend= recommend;
     }
+
+    public String getName() {return  name;}
+
+    public void setName(String name) {this.name=name;}
+
+    public String getIntro() {return intro;}
+
+    public void setIntro(String intro){this.intro=intro;}
 }
