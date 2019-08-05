@@ -10,27 +10,31 @@ public class Commend {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public long getVideo_id() {
-        return videoId;
-    }
-
-    public void setVideo_id(int videoId) {
-        this.videoId = videoId;
-    }
-
-    public long getUser_id() {
+    public long getUserId() {
         return userId;
     }
 
-    public void setUser_id(int userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 
-    public String getText() {return text;}
+    public long getVideoId() {
+        return videoId;
+    }
 
-    public void setText(String text) {this.text=text;}
+    public void setVideoId(long videoId) {
+        this.videoId = videoId;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
 }

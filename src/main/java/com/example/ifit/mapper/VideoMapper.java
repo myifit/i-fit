@@ -41,7 +41,7 @@ public interface VideoMapper {
      * @param id
      * @return
      */
-    boolean updateNameById(@Param("Name") String name, @Param("Id") long id);
+    boolean updateNameById(@Param("name") String name, @Param("id") long id);
 
     /**
      *
@@ -49,7 +49,7 @@ public interface VideoMapper {
      * @param id
      * @return
      */
-    boolean updateLikeById(@Param("Like") int like,@Param("Id") long id);
+    boolean updateLikeById(@Param("like") int like,@Param("id") long id);
 
     /**
      *
@@ -57,7 +57,7 @@ public interface VideoMapper {
      * @param id
      * @return
      */
-    boolean updateUnlikeById(@Param("Unlike") int unlike,@Param("Id") long id);
+    boolean updateUnlikeById(@Param("unlike") int unlike,@Param("id") long id);
 
     /**
      *
@@ -65,5 +65,5 @@ public interface VideoMapper {
      * @param id
      * @return
      */
-    boolean updateRecommendById(@Param("Recommend") int recommend,@Param("Id") long id);
+    boolean updateRecommendById(@Param("recommend") int recommend,@Param("id") long id);
 }

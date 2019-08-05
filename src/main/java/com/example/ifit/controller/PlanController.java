@@ -43,8 +43,8 @@ public class PlanController {
     public ResponseEntity<Integer> addByPlan(@RequestParam("Video_id") long video_id,@RequestParam("User_id") long user_id)
     {
         Plan plan=new Plan();
-        plan.setVideo_Id(video_id);
-        plan.setUser_Id(user_id);
+        plan.setVideoId(video_id);
+        plan.setUserId(user_id);
 
         return ResponseEntity.ok(planMapper.insertPlan(plan));
     }

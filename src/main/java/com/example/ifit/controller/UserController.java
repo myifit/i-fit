@@ -20,7 +20,7 @@ public class UserController {
     @GetMapping("")
     @ResponseBody
     public ResponseEntity<User> getBytel(@RequestParam("tel") String tel){
-        return ResponseEntity.ok(userMapper.findBytel(tel));
+        return ResponseEntity.ok(userMapper.findByTel(tel));
     }
 
     @PutMapping("/password/{id}")
@@ -55,6 +55,18 @@ public class UserController {
         user.setName(name);
         user.setPassword(password);
         user.setPicture(picture);
+
+        return ResponseEntity.ok(userMapper.insertUser(user));
+    }
+
+    @PostMapping("/register")
+    @ResponseBody
+    public ResponseEntity<Integer> register(@RequestParam("Telephone") String telephone,@RequestParam("Password") String password){
+        User user=new User();
+        user.setTelephone(telephone);
+        user.setName("某人");
+        user.setPassword(password);
+        user.setPicture("123");
 
         return ResponseEntity.ok(userMapper.insertUser(user));
     }

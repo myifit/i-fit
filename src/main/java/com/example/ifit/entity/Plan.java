@@ -5,6 +5,7 @@ public class Plan {
     private long videoId;
     private long userId;
 
+
     public long getId() {
         return id;
     }
@@ -17,7 +18,7 @@ public class Plan {
         return videoId;
     }
 
-    public void setVideo_Id(long videoId) {
+    public void setVideoId(long videoId) {
         this.videoId = videoId;
     }
 
@@ -25,9 +26,7 @@ public class Plan {
         return userId;
     }
 
-    public void setUser_Id(long userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
-
-
 }

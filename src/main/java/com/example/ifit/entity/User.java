@@ -7,6 +7,30 @@ public class User {
     private  String name;
     private String picture;
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public String getName() {
         return name;
     }
@@ -19,31 +43,7 @@ public class User {
         return picture;
     }
 
-    public void setPicture(String image) {
+    public void setPicture(String picture) {
         this.picture = picture;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String tel) {
-        this.telephone = telephone;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 }

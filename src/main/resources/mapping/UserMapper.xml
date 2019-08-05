@@ -18,6 +18,7 @@
         where id=#{id}
     </delete>
 
+
     <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
         insert into user(telephone, name,password,picture)
         values (#{telephone},#{name},#{password},#{picture})

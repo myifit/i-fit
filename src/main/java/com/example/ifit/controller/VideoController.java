@@ -64,8 +64,8 @@ public class VideoController {
         public ResponseEntity<Integer> addByVideo(@RequestParam("Name") String Name,@RequestParam("Intro") String intro,@RequestParam("Like") int like,@RequestParam("Unlike") int unlike,@RequestParam("Recommend") int recommend,@RequestParam("AuthorId") long authorid,@RequestParam("CourseId") long courseid,@RequestParam("Difficulty") int difficulty)
     {
         Video video=new Video();
-        video.setAuthor_Id(authorid);
-        video.setCourse_Id(courseid);
+        video.setAuthorId(authorid);
+        video.setCourseId(courseid);
         video.setDifficulty(difficulty);
         video.setLike(like);
         video.setUnlike(unlike);

@@ -11,7 +11,7 @@ public interface UserMapper {
      * @param telephone
      * @return
      */
-    User findBytel(String telephone);
+    User findByTel(String telephone);
 
     /**
      *
@@ -33,7 +33,7 @@ public interface UserMapper {
      * @param id
      * @return
      */
-    boolean updatePasswordById(@Param("Password") String password, @Param("Id") long id);
+    boolean updatePasswordById(@Param("password") String password, @Param("id") long id);
 
     /**
      *
@@ -41,7 +41,7 @@ public interface UserMapper {
      * @param id
      * @return
      */
-    boolean updateNameById(@Param("Name") String name,@Param("Id") long id);
+    boolean updateNameById(@Param("name") String name,@Param("id") long id);
 
     /**
      *
@@ -49,7 +49,7 @@ public interface UserMapper {
      * @param id
      * @return
      */
-    boolean updatePictureById(@Param("Picture") String picture,@Param("Id") long id);
+    boolean updatePictureById(@Param("picture") String picture,@Param("id") long id);
 
 
 }
