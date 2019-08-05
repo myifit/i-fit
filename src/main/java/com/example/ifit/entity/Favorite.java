@@ -6,7 +6,6 @@ public class Favorite {
     private long videoId;
     private long userId;
 
-
     public long getId() {
         return id;
     }
@@ -38,4 +37,5 @@ public class Favorite {
     public void setUserId(long userId) {
         this.userId = userId;
     }
+
 }

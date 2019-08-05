@@ -10,6 +10,16 @@ public class Video {
     private int unlike;
     private int difficulty;
     private int recommend;
+    private String vediopath;
+
+    public String getVediopath() {
+        return vediopath;
+    }
+
+    public void setVediopath(String vediopath) {
+        this.vediopath = vediopath;
+    }
+
 
     public long getId() {
         return id;
