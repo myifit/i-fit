@@ -71,7 +71,7 @@ public class VideoController {
                                               @RequestParam("Recommend") Integer recommend, @RequestParam("AuthorId") Long authorId,
                                               @RequestParam("CourseId") Long courseId, @RequestParam("Difficulty") Integer difficulty, MultipartFile file)
     {
-       return videoService.uploadVideo(request,name,intro,like,unlike,recommend,authorId,courseId,difficulty,request.getServletContext().getRealPath("/upload/ppt/"),file);
+       return videoService.uploadVideo(request,name,intro,like,unlike,recommend,authorId,courseId,difficulty,request.getServletContext().getRealPath("/upload/video/"),file);
     }
 
 }
