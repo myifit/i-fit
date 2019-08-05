@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.ifit.mapper.CommendMapper">
+    <resultMap id="tab_commend" type="com.example.ifit.entity.Commend">
+        <result property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="videoId" column="video_id"/>
+        <result property="text" column="text"/>
+    </resultMap>
+
+    <select id="findCommendById" parameterType="long" resultMap="tab_commend">
+            select * from commend where id = #{id}
+    </select>
+
+    <delete id="deleteCommendById" parameterType="Long">
+        delete from commend where id = #{id}
+    </delete>
+
+    <insert id="insertCommend" keyProperty="id" useGeneratedKeys="true">
+        insert into commend(user_id, video_id, text)
+        values (#{userId},#{videoId},#{text})
+    </insert>
+
+    <update id="updateText" parameterType="Commend">
+        update commend set text = #{text} where id = #{id} and user_id = #{userId}
+    </update>
+
+
+</mapper>
