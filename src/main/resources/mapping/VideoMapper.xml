@@ -3,22 +3,23 @@
 <mapper namespace="com.example.ifit.mapper.VideoMapper">
     <resultMap id="tab_video" type="com.example.ifit.entity.Video">
         <result property="id" column="id"/>
-        <result property="authorId" column="authorId"/>
+        <result property="authorId" column="author_id"/>
         <result property="name" column="name"/>
         <result property="difficulty" column="difficulty"/>
-        <result property="like" column="like"/>
-        <result property="courseId" column="courseId"/>
+        <result property="lik" column="lik"/>
+        <result property="courseId" column="course_id"/>
         <result property="intro" column="intro"/>
         <result property="unlike" column="unlike"/>
         <result property="recommend" column="recommend"/>
+        <result property="videopath" column="videopath"/>
     </resultMap>
 
     <select id="listfindByAuthorId" resultMap="tab_video">
-        SELECT * FROM video WHERE author_id = #{author_id}
+        SELECT * FROM video WHERE author_id = #{authorId}
     </select>
 
     <select id="listfindByVideoId" resultMap="tab_video">
-        SELECT * FROM video WHERE video_id = #{video_id}
+        SELECT * FROM video WHERE id = #{id}
     </select>
 
     <delete id="deleteById" >
@@ -27,8 +28,8 @@
     </delete>
 
     <insert id="insertVideo" useGeneratedKeys="true" keyProperty="id">
-        insert into video(name, intro ,course_id,author_id,"like",unlike,recommend,difficulty)
-        values (#{name},#{intro},#{course_id},#{author_id},#{like},#{unlike},#{recommend},#{difficulty})
+        insert into video(name, intro ,course_id,author_id,lik,unlike,recommend,difficulty,videopath)
+        values (#{name},#{intro},#{courseId},#{authorId},#{lik},#{unlike},#{recommend},#{difficulty},#{videopath})
     </insert>
 
     <update id="updateNameById" >

@@ -2,10 +2,13 @@ package com.example.ifit.controller;
 
 import com.example.ifit.entity.Video;
 import com.example.ifit.mapper.VideoMapper;
+import com.example.ifit.service.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 //@CrossOrigin
@@ -14,6 +17,8 @@ import java.util.List;
 public class VideoController {
     @Autowired
     private VideoMapper videoMapper;
+    @Autowired
+    VideoService videoService;
 
     @GetMapping("/listfindByAuthorId")
     @ResponseBody
@@ -61,17 +66,12 @@ public class VideoController {
 
     @PostMapping("/insert")
     @ResponseBody
-        public ResponseEntity<Integer> addByVideo(@RequestParam("Name") String Name,@RequestParam("Intro") String intro,@RequestParam("Like") int like,@RequestParam("Unlike") int unlike,@RequestParam("Recommend") int recommend,@RequestParam("AuthorId") long authorid,@RequestParam("CourseId") long courseid,@RequestParam("Difficulty") int difficulty)
+    public boolean addByVideo(HttpServletRequest request, @RequestParam("Name") String name, @RequestParam("Intro") String intro,
+                                              @RequestParam("Like") Integer like, @RequestParam("Unlike") Integer unlike,
+                                              @RequestParam("Recommend") Integer recommend, @RequestParam("AuthorId") Long authorId,
+                                              @RequestParam("CourseId") Long courseId, @RequestParam("Difficulty") Integer difficulty, MultipartFile file)
     {
-        Video video=new Video();
-        video.setAuthorId(authorid);
-        video.setCourseId(courseid);
-        video.setDifficulty(difficulty);
-        video.setLike(like);
-        video.setUnlike(unlike);
-        video.setRecommend(recommend);
-
-        return ResponseEntity.ok(videoMapper.insertVideo(video));
+       return videoService.uploadVideo(request,name,intro,like,unlike,recommend,authorId,courseId,difficulty,request.getServletContext().getRealPath("/upload/ppt/"),file);
     }
 
 }

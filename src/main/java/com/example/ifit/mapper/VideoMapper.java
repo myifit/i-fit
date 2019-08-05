@@ -9,24 +9,24 @@ public interface VideoMapper {
 
     /**
      *
-     * @param author_id
+     * @param authorId
      * @return
      */
-    List<Video> listfindByAuthorId(long author_id);
+    List<Video> listfindByAuthorId(long authorId);
 
     /**
      *
-     * @param video_id
+     * @param videoId
      * @return
      */
-    List<Video> listfindByVideoId(long video_id);
+    List<Video> listfindByVideoId(long videoId);
 
     /**
      *
      * @param video
      * @return
      */
-    int insertVideo(Video video);
+    boolean insertVideo(Video video);
 
     /**
      *

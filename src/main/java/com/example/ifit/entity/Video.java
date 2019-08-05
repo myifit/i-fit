@@ -6,20 +6,11 @@ public class Video {
     private String intro;
     private long authorId;
     private long courseId;
-    private int like;
+    private int lik;
     private int unlike;
     private int difficulty;
     private int recommend;
-    private String vediopath;
-
-    public String getVediopath() {
-        return vediopath;
-    }
-
-    public void setVediopath(String vediopath) {
-        this.vediopath = vediopath;
-    }
-
+    private String videopath;
 
     public long getId() {
         return id;
@@ -62,11 +53,11 @@ public class Video {
     }
 
     public int getLike() {
-        return like;
+        return lik;
     }
 
-    public void setLike(int like) {
-        this.like = like;
+    public void setLike(int lik) {
+        this.lik = lik;
     }
 
     public int getUnlike() {
@@ -91,5 +82,13 @@ public class Video {
 
     public void setRecommend(int recommend) {
         this.recommend = recommend;
+    }
+
+    public String getVediopath() {
+        return videopath;
+    }
+
+    public void setVediopath(String videopath) {
+        this.videopath = videopath;
     }
 }
