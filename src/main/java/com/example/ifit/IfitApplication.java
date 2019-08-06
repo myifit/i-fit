@@ -8,8 +8,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @MapperScan(basePackages = "com.example.ifit.mapper")
-@EnableTransactionManagement
-@EnableAutoConfiguration
+//@EnableTransactionManagement
+//@EnableAutoConfiguration//自动配置注解
 public class IfitApplication {
 
     public static void main(String[] args) {
