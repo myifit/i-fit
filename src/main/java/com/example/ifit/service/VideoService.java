@@ -20,7 +20,7 @@ public class VideoService {
                                MultipartFile file){
         try{
             String tempPath = videoPath+file.getOriginalFilename();
-            if (!file.isEmpty() && videoDao.uploadVideo(name,intro,like,unlike,recommend,authorId,courseId,difficulty,videoPath)) {
+            if (!file.isEmpty() && videoDao.uploadVideo(name,intro,like,unlike,recommend,authorId,courseId,difficulty,tempPath)) {
                 /*BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(new File(Ware_path)));
                 out.write(file.getBytes());
                 out.flush();
